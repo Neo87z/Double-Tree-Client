@@ -91,7 +91,7 @@ class AddVehicle extends Component {
 
         };
         console.log(User);
-        axios.post('http://localhost:8089/rooms/updateroom', User)
+        axios.post('https://doubletreeapi.herokuapp.com/rooms/updateroom', User)
             .then(res => console.log(res.data)); window.location = `/viewRooms`
 
     }
@@ -101,7 +101,7 @@ class AddVehicle extends Component {
         const Room = {
             id: this.props.match.params.id
         }
-        axios.post('http://localhost:8089/rooms/get_room_dataByID', Room)
+        axios.post('https://doubletreeapi.herokuapp.com/rooms/get_room_dataByID', Room)
             .then(response => {
 
                 this.setState({ Full_Name: response.data.data[0].Room_Name });

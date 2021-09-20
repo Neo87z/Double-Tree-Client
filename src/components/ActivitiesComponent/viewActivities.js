@@ -21,7 +21,7 @@ class GetallCategories extends Component {
 
   componentDidMount() {
     console.log("test")
-    axios.get('http://localhost:8089/user/get_all_actiities')
+    axios.get('https://doubletreeapi.herokuapp.com/user/get_all_actiities')
       .then(response => {
         this.setState({ options: response.data });
         console.log(response.data)

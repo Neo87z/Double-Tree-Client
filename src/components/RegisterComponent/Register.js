@@ -89,7 +89,7 @@ class AddVehicle extends Component {
             Sex: this.state.Sex,
         };
         console.log(User);
-        axios.post('http://localhost:8089/user/add_user', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/add_user', User)
             .then(response => {
                 console.log(response.data.Status)
                 if (response.data.Status == "Email") {

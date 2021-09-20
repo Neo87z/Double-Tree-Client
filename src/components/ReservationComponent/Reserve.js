@@ -71,7 +71,7 @@ class AddVehicle extends Component {
             Status: "Pending"
         };
         console.log(Reservation);
-        axios.post('http://localhost:8089/reservation/make_reservation', Reservation)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/make_reservation', Reservation)
             .then(res => {
                 toast.show({ title: 'Reservation Made Sucessfully ', position: 'topcenter', type: 'info' })
                 window.location = `/MakePyament`
@@ -81,7 +81,7 @@ class AddVehicle extends Component {
 
     componentDidMount() {
         console.log("test")
-        axios.get('http://localhost:8089/rooms/get_all_rooms')
+        axios.get('https://doubletreeapi.herokuapp.com/rooms/get_all_rooms')
             .then(response => {
                 this.setState({ options: response.data });
                 console.log(response.data)

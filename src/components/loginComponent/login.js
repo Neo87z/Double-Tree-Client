@@ -70,7 +70,7 @@ class AddVehicle extends Component {
         };
         
         console.log(User);
-        axios.post('http://localhost:8089/user/login', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/login', User)
             .then(res =>{
                 console.log(res.data.Status)
                 this.setState({ Status: res.data.Status });
@@ -89,7 +89,7 @@ class AddVehicle extends Component {
 
     componentDidMount() {
         console.log("test")
-        axios.get('http://localhost:8089/category/get_all_categories')
+        axios.get('https://doubletreeapi.herokuapp.com/category/get_all_categories')
         .then(response => {
           this.setState({ options: response.data });
           console.log(response.data)

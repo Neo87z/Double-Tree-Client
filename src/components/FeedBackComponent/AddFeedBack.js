@@ -88,7 +88,7 @@ class AddVehicle extends Component {
             Message: this.state.Age,
         };
         console.log(User);
-        axios.post('http://localhost:8089/user/AddFeedBack', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/AddFeedBack', User)
             .then(res => {
                 if (res.data.Status == "Fail") {
 
@@ -103,7 +103,7 @@ class AddVehicle extends Component {
 
     componentDidMount() {
         console.log("test")
-        axios.get('http://localhost:8089/category/get_all_categories')
+        axios.get('https://doubletreeapi.herokuapp.com/category/get_all_categories')
             .then(response => {
                 this.setState({ options: response.data });
                 console.log(response.data)

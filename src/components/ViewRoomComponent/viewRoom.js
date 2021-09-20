@@ -20,7 +20,7 @@ class GetallCategories extends Component {
 
     componentDidMount() {
         console.log("test")
-        axios.get('http://localhost:8089/rooms/get_all_rooms')
+        axios.get('https://doubletreeapi.herokuapp.com/rooms/get_all_rooms')
             .then(response => {
                 this.setState({ options: response.data });
                 console.log(response.data)
@@ -36,7 +36,7 @@ class GetallCategories extends Component {
         const User = {
             id: ID
         }
-        axios.post('http://localhost:8089/rooms/RemoveROOm', User)
+        axios.post('https://doubletreeapi.herokuapp.com/rooms/RemoveROOm', User)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)

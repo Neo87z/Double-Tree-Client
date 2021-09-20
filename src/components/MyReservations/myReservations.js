@@ -24,7 +24,7 @@ class GetallCategories extends Component {
         const User = {
             User_Name: "User"
         }
-        axios.post('http://localhost:8089/reservation/ResByID', User)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/ResByID', User)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data)
@@ -36,7 +36,7 @@ class GetallCategories extends Component {
         const User = {
             id: ID
         }
-        axios.post('http://localhost:8089/reservation/RemoveUserReservation', User)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/RemoveUserReservation', User)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)

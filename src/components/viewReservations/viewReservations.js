@@ -25,7 +25,7 @@ class GetallCategories extends Component {
             User_Name: "User"
         }
         try {
-            axios.post('http://localhost:8089/reservation/get_all_Reservations_byUserID', User)
+            axios.post('https://doubletreeapi.herokuapp.com/reservation/get_all_Reservations_byUserID', User)
                 .then(response => {
                     this.setState({ options: response.data.data });
                     this.setState({ size: response.data.data[0].Room_ID });
@@ -52,7 +52,7 @@ class GetallCategories extends Component {
             Price: Price,
             Status: "Decline"
         };
-        axios.post('http://localhost:8089/reservation/RemoveReservation', Reservation)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/RemoveReservation', Reservation)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)
@@ -70,7 +70,7 @@ class GetallCategories extends Component {
             Price: Price,
             Status: "Accept"
         };
-        axios.post('http://localhost:8089/reservation/RemoveReservation', Reservation)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/RemoveReservation', Reservation)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)

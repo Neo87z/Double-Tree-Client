@@ -90,7 +90,7 @@ class AddVehicle extends Component {
             Sex: this.state.Sex,
         };
         console.log(User);
-        axios.post('http://localhost:8089/user/updateUser', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/updateUser', User)
             .then(res => {
                 setTimeout(() => {
                     console.log('Hello, World!')
@@ -107,7 +107,7 @@ class AddVehicle extends Component {
         const User = {
             id: this.props.match.params.id
         }
-        axios.post('http://localhost:8089/user/get_UserData', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/get_UserData', User)
             .then(response => {
                 this.setState({ Full_Name: response.data.data[0].Full_Name });
                 this.setState({ Email: response.data.data[0].Email });

@@ -21,7 +21,7 @@ class GetallCategories extends Component {
 
   componentDidMount() {
     console.log("test")
-    axios.get('http://localhost:8089/admin/GetallRefund')
+    axios.get('https://doubletreeapi.herokuapp.com/admin/GetallRefund')
       .then(response => {
         this.setState({ options: response.data });
         console.log(response.data)

@@ -73,7 +73,7 @@ class AddVehicle extends Component {
             Status: "Pending"
         };
         console.log(Reservation);
-        axios.post('http://localhost:8089/reservation/RemoveReservation', Reservation)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/RemoveReservation', Reservation)
             .then(res => {
                 toast.show({ title: 'Reservation Updated Sucessfully ', position: 'topcenter', type: 'info' })
                 window.location = `/myReservations`
@@ -86,7 +86,7 @@ class AddVehicle extends Component {
         const User = {
             User_Name: "User"
         }
-        axios.post('http://localhost:8089/reservation/get_all_Reservations_byUserID', User)
+        axios.post('https://doubletreeapi.herokuapp.com/reservation/get_all_Reservations_byUserID', User)
             .then(response => {
                 this.setState({ size: response.data.data[0].Room_ID });
                 this.setState({ Ammount: response.data.data[0].To_Date });

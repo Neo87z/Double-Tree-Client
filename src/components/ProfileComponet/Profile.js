@@ -23,7 +23,7 @@ class GetallCategories extends Component {
         const User = {
             id: "pawani@gmail.com"
         }
-        axios.post('http://localhost:8089/user/get_UserData', User)
+        axios.post('https://doubletreeapi.herokuapp.com/user/get_UserData', User)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)
@@ -40,7 +40,7 @@ class GetallCategories extends Component {
         const User = {
             id: ID
         }
-        axios.post('http://localhost:8089/admin/removeUser', User)
+        axios.post('https://doubletreeapi.herokuapp.com/admin/removeUser', User)
             .then(response => {
                 this.setState({ options: response.data.data });
                 console.log(response.data.data)

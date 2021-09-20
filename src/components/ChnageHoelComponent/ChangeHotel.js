@@ -91,14 +91,14 @@ class AddVehicle extends Component {
             Price_Min: "100",
         };
         console.log(Hoetl);
-        axios.put('http://localhost:8089/admin/update_hotel', Hoetl)
+        axios.put('https://doubletreeapi.herokuapp.com/admin/update_hotel', Hoetl)
             .then(res => console.log(res.data));
         window.location = `/ChangeHotel`
     }
 
     componentDidMount() {
         console.log("test")
-        axios.get('http://localhost:8089/admin/get_hotelData')
+        axios.get('https://doubletreeapi.herokuapp.com/admin/get_hotelData')
             .then(response => {
                 this.setState({ Full_Name: response.data.data[0].Hotel_Name });
                 this.setState({ Email: response.data.data[0].Hotel_Address });
