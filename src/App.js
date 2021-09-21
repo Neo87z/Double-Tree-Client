@@ -40,7 +40,7 @@ function App() {
       
         <section>
           <Switch>
-            <Route path="/login" component={login} />
+            <Route exact path="/" component={login} />
             <Route path="/register" component={register} />  
             <Route path="/profile" component={profile} />  
             <Route path="/room" component={room} />  
