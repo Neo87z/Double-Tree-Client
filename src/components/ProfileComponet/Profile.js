@@ -21,7 +21,7 @@ class GetallCategories extends Component {
     componentDidMount() {
         console.log("test")
         const User = {
-            id: "pawani@gmail.com"
+            id: "shadir@gmail.com"
         }
         axios.post('https://doubletreeapi.herokuapp.com/user/get_UserData', User)
             .then(response => {
@@ -46,7 +46,7 @@ class GetallCategories extends Component {
                 console.log(response.data.data)
                 console.log("test11")
             })
-        window.location = `/ViewAlluser`
+        window.location = `/login`
     }
 
     render() {
